@@ -1,0 +1,93 @@
+---
+title: "Introduzione alla programmazione con R"
+author: "V.Porcu"
+date: "May 2, 2018"
+output:
+  html_document: default
+  word_document: default
+---
+
+## Esempi con Markdown
+
+In questa lezione vediamo come creare un documento che includa sia del testo sia del codice con Markdown. Possiamo scrivere normalmente sul documento Markdown avendo cura di aggiungere il simbolo # per definire i titoli dei paragrafi
+
+Andando in alto a destra su insert possiamo aggiungere uno spazio per il codice in R, che dev'essere delimitato all'inizio e alla fine da tre virgolette singole:
+
+```{r}
+
+summary(iris)
+
+```
+
+### Includiamo un grafico aggiungendo il parametro echo = FALSE
+
+```{r, echo=FALSE}
+plot(iris)
+```
+
+Se non lo aggiungiamo, verrà stampato il codice, oltre all'immagine:
+
+```{r}
+plot(iris$Species)
+```
+
+Possiamo aggiungere del codice anche in un altro linguaggio:
+
+```{python}
+tupla1 = (1,2,3,4,5)
+lista1 = ["jan", "feb", "mar", "apr"]
+```
+
+Possiamo inserire dei titoli di varia grandezza aggiungendo un # oppure più #. Quanti più cancelletti aggiungiamo, tanto più piccolo sarà il titolo
+
+# Titolo 1
+## Titolo 2
+### Titolo 3
+#### Titolo 4
+
+#### Possiamo inserire del testo in corsivo in questo modo:
+
+*corsivo1*
+
+_corsivo2_
+
+#### In grassetto in questo modo:
+
+**grassetto1**
+
+__grassetto2__
+
+#### Costruire degli elenchi puntati:
+
+* lista
+* secondo elemento della lista
+    + sottoelemento 1
+    + sottoelemento 2
+    
+1. seconda lista
+2. secondo elemento della seconda lista
+    + sottoelemento 1
+    + sottoelemento 2
+    
+#### Costruire una tabella:
+
+Titolo tabella | Prima colonna
+-------------- | -----------------------
+Riga uno       | primo valore colonna
+Riga due       | secondo valore colonna
+
+#### Possiamo inserire un link:
+
+il mio link va apposto su [questa parte di testo](www.link_di_esempio.com)
+
+#### Una formula matematica:
+
+$$ x * 3.14 $$
+
+#### O un'immagine
+
+![eventuale sottotitolo dell'immagine](https://www.r-project.org/logo/Rlogo.png)
+
+#### Possiamo ridurre le dimensioni dell'immagine
+
+![logo R](https://www.r-project.org/logo/Rlogo.png){width=10%}

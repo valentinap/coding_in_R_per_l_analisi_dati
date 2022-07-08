@@ -1,0 +1,51 @@
+presentazione1
+========================================================
+author: Valentina
+date: 2 May 2018
+autosize: true
+
+Prima slide
+========================================================
+
+Per maggiori dettagli sul corso potete visitare il mio sito 
+
+<https://ww.DataWiring.me>
+
+Ci troverete corsi e codici su 
+
+- machine learning
+- deep learning
+- text mining
+
+Slide con codice
+========================================================
+
+```{r}
+summary(iris)
+```
+
+Slide con grafico
+========================================================
+
+```{r, echo=FALSE}
+plot(iris$Species)
+```
+
+Slide con immagine
+========================================================
+
+![Logo DW](logo1.jpg)
+
+Slide con due colonne
+===============
+left:40%
+
+**Prima colonna**
+- this slide has two columns
+-	the first column has text
+-	the second column has an image
+
+***
+**Seconda colonna**
+
+![Margherite](daisies.jpg)
