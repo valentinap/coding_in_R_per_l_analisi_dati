@@ -123,4 +123,18 @@ is.numeric(x)
 
 y <- as.character(x)
 
+x <- c(3.5, "test") # character
+
+y <- c(TRUE, 2) # numeric
+
+z <- c("test", TRUE) # character
+
+
+
+
+
+
+
+
+
 
