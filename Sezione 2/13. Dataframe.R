@@ -135,13 +135,13 @@ subset(df1, sex == 'm')
 
 # ancora, possiamo ordinare un dataframe in base a una delle sue variabili:
 
-ordf <- order(df1['age'])
+ordf <- order(df1[, 'age'])
 
 # in alternativa ordf <- order(df1$age)
 
 df1[ordf,]
 
-ordf2 <- order(-df1['id'])
+ordf2 <- order(-df1[,'id'])
 
 df[ordf2,]
 
