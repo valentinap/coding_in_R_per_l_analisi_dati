@@ -45,7 +45,7 @@ head(df1, 3)
 
 # per rimuovere una variabile da un dataframe, invece, procediamo in questo modo
 
-df$married <- NULL
+df1$married <- NULL
 
 # possiamo aggiungere una variabile anche tramite la funzione cbind()
 
@@ -143,7 +143,7 @@ df1[ordf,]
 
 ordf2 <- order(-df1[,'id'])
 
-df[ordf2,]
+df1[ordf2,]
 
 
 # modificare i nomi delle variabili

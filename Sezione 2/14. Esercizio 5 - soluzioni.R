@@ -71,9 +71,7 @@ df1$new_heigth <- df1$heigth + 2
 
 # 14) riordina il dataset in base alla variabile new_heigth
 
-ordf <- order(df1['new_heigth'])
-
-df1[ordf,]
+ordf <-  df1[order(df1$new_heigth), ]
 
 # 15) dal dataset precaricato mtcars estrai con la funzione subset() i casi in cui 
 # la variabile cyl è uguale a 6
