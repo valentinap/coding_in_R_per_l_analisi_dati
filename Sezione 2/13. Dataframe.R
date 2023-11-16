@@ -3,7 +3,7 @@
 # direttamente tramite la funzione data.frame()
 
 df1 <- data.frame(id = c(1, 2, 3, 4, 5, 6, 7, 8, 9, 10),
-                  name = c('Laura', 'Simon', 'Kate', 'Francis', 'Joseph', 'Rosie', 'Matt', 'Eleanor', 'Angie', 'Hamed'),
+                  name = c('Laura', 'Simon', 'Kate', 'Francis', 'Joseph', 'Lucia', 'Matt', 'Eleanor', 'Angie', 'Hamed'),
 heights = c('168', '180', '165', '169', '178', '164', '182', '170', '163','164'),
                  sex = c('f', 'm', 'f', 'm', 'm', 'f', 'm', 'f', 'f', 'm'),
 age = c(32, 35, 54, 57, 39, 42, 33, 16, 29, 27))
@@ -40,7 +40,7 @@ head(df1)
 
 # posso anche decidere quante occorrenze stampare, tramite il secondo parametro della funzione head()
 
-head(df1, 3)
+head(df1, 2)
 
 
 # per rimuovere una variabile da un dataframe, invece, procediamo in questo modo
@@ -97,13 +97,8 @@ df1[, -c(1,3)]
 
 # possiamo anche estrarre una o più variabili tramite il nome:
 
-# nel caso di variabili singole
-
-# sotto forma di vettore singolo
 
 df1[, 'name']
-
-# sotto forma di dataframe
 
 df1['heights']
 
@@ -131,6 +126,10 @@ df1$sex == 'm'
 df1[df1$sex == 'm' ,]
 
 subset(df1, sex == 'm')
+
+# translare un dataframe
+
+t(df1)
 
 
 # ancora, possiamo ordinare un dataframe in base a una delle sue variabili:
@@ -163,43 +162,17 @@ summary(df1)
 
 str(df1)
 
-# se convertiamo in questo modo otteniamo la conversione errata nei livelli del fattore
+# convertiamo la variabile in valore numerico
 
 df1$heights <- as.integer(df1$heights)
-
-# dobbiamo convertire così
-
-df1$heights <- as.integer(as.character(df1$heights))
-
-# o ancora meglio, ricordarci di inserire il parametro stringsAsFactors al momento di importare i dati
-
-# stringsAsFactors = FALSE
-
-df1 <- data.frame(id = c(1, 2, 3, 4, 5, 6, 7, 8, 9, 10),
-                  name = c('Laura', 'Simon', 'Kate', 'Francis', 'Joseph', 'Rosie', 'Matt', 'Eleanor', 'Angie', 'Hamed'),
-                  heights = c('168', '180', '165', '169', '178', '164', '182', '170', '163','164'),
-                  sex = c('f', 'm', 'f', 'm', 'm', 'f', 'm', 'f', 'f', 'm'),
-                  age = c(32, 35, 54, 57, 39, 42, 33, 16, 29, 27), stringsAsFactors = FALSE)
 
 
 # possiamo a questo punto unire i due dataframe sulla base di una chiave comune, che è la variabile 'id'
 
 merge(df1, df2, by = 'id')
 
+df3 <- merge(df1, df2, by = 'id')
 
-# riordiniamo le colonne
-
-# ordine originale
-
-colnames(df1)
-
-# per posizione
-
-df1[c(1,2, 4,5,3)]
-
-# oppure tramite il nome
-
-df1[c("id", "name", "heights", "sex", "age" )]
 
 # ricordiamoci sempre di sovrascrivere il vecchio dataset 
 # o di creare uno nuovo, per rendere definitiva la modifica!
